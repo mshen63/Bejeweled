@@ -52,7 +52,7 @@ var goalcounter = 0; //reset every level
 var highscore = 0;
 
 document.getElementById("new").onclick=function(){newGame()};
-c.onload=newGame();
+window.onload=newGame();
 
 function newGame(){
 
