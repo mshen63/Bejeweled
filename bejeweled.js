@@ -52,10 +52,12 @@ var goalcounter = 0; //reset every level
 var highscore = 0;
 
 document.getElementById("new").onclick=function(){newGame()};
-window.onload=newGame();
+c.onload=newGame();
 
 function newGame(){
-
+ctx.font = "20px Russo One";
+var worddim = ctx.measureText("Game Loading");
+ctx.fillText("Game Loading",(grid.rows*grid.tileheight/2)-(worddim.width/2)+5,grid.rows*grid.tileheight/2);
 document.body.style.backgroundColor=color[0];
 document.getElementById("goal").style.color=color[0]
 document.getElementById("progress").style.backgroundColor = color[0];
@@ -85,10 +87,6 @@ document.getElementById("hint").onclick=function(){
   giveHint()
 };
 
-//fill background
-ctx.fillStyle = "white";
-ctx.fillRect(0,0,c.width,c.height);
-
 //initialize random jewels
 for (var i=0;i<grid.columns;i++){
   let layer = [];
@@ -103,6 +101,8 @@ findMatch();
 goThroughAll(addNonRepeatingTiles);
 
 //draw the gems to canvas
+ctx.fillStyle = "white";
+ctx.fillRect(0,0,c.width,c.height);
 goThroughAll(drawGems);
 
 }
