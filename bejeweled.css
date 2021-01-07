@@ -34,7 +34,7 @@ canvas{
   flex-direction: column;
 }
 
-h1{
+h1,p{
   font-family: Russo One;
 }
 
