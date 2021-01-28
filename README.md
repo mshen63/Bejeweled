@@ -1,4 +1,3 @@
 # !Bejeweled
 
-Highkey a little sus. If the move doesn't go through, just press a few random gems and it'll reload itself lol. I'll fix it soon :>
-https://mshen63.github.io/Bejeweled/
+Fully-functional connect-3 game with leveling, high score-keeping, and hint system. Made with Vanilla-JS as a fun personal project. 
